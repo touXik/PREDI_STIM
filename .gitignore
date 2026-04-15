@@ -1,0 +1,30 @@
+# === Dossiers à ignorer ===
+Output/
+data/
+logs/
+.env/
+venv/
+__pycache__/
+
+# === Fichiers Excel ===
+*.xlsx
+
+# === Jupyter notebooks spécifiques ===
+01_Structure.ipynb
+02_prétraitement.ipynb
+
+# === Tous les notebooks (optionnel, décommente si tu veux tout ignorer) ===
+# *.ipynb
+
+# === Fichiers temporaires ===
+*.tmp
+*.log
+
+# === Python ===
+# *.pyc
+# *.pyo
+# *.pyd
+
+# === OS ===
+# .DS_Store
+# Thumbs.db
