@@ -10,8 +10,9 @@ __pycache__/
 *.xlsx
 
 # === Jupyter notebooks spécifiques ===
-01_Structure.ipynb
+valeurs_aberrantes.ipynb
 02_prétraitement.ipynb
+04_Traitement.ipynb
 
 # === Tous les notebooks (optionnel, décommente si tu veux tout ignorer) ===
 # *.ipynb
