@@ -13,7 +13,10 @@ __pycache__/
 valeurs_aberrantes.ipynb
 02_prétraitement.ipynb
 04_Traitement.ipynb
+Analyse.ipynb
+Analyses_statistiques.ipynb
 
+dict.docx
 # === Tous les notebooks (optionnel, décommente si tu veux tout ignorer) ===
 # *.ipynb
 
