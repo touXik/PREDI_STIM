@@ -1,0 +1,378 @@
+-----feuille infos statiques 
+AGE_SEX_DUREE    
+Mutation_GBA_LRRK2  
+FIN_ETUDE
+----- feuille Bilan (année 0,1,3,5)
+
+Poids_Taille V0  
+Poids_Taille_V1_3_5   
+UPDRS_IV 
+UPDRSIII_COMPLET_V0_V1 --------------------------------------- ( identifiant V0_V1  ? ) voir les noms des colonnes 
+UPDRSIII_COMPLET_V3_V5 
+UPDRSIII_TOTAUX  ----------------------------------------------  ( identifiant V_  ? ) voir les noms des colonnes ==V12H_APRES1
+ECMP  
+QUIP 
+UPPS
+MOCA_V0_V3
+MOCA_V1_V5
+HAMD
+HAMA 
+LARS 
+PDQ39
+DIGITSMT_TRAILMT_DKEFS
+CONSO_SPECIFIQUE
+LEED
+Feuil1
+PSYCHOTROPES 
+AUTRE_PARKINSON 
+fréquence V1_3_5
+
+
+-------fichiers à créer
+info.csv
+V0.csv
+V1.csv
+V3.csv 
+V5.csv
+Vc.csv (CONSO_SPECIFIQUE)
+
+
+On sait pas : 
+Feuil4
+Feuil2
+
+
+
+
+V0__________________________________________
+
+df_V0.xlsx  ( TITRE == Visite de screening ) 
+df_v0_LEED_info.xlsx    (Visit = Traitements concomittants antiparkinsoniens spécifiques)  
+df_v0_LEED  
+df_v0_PSYCHOTROPES ( VISIT =Les traitements psychotropes) 
+df_v0_AUTRE_PARKINSON (Autres médicaments prescrits dans le cadre de la maladie de Parkinson) 
+df_v0_CONSO_SPECIFIQUE (VISIT = Traitements concomittants antiparkinsoniens spécifiques)
+df_v0_DIGITSMT_TRAILMT_DKEFS  ( à vérifier avec les valeurs TRAILMT_ALPHABET.D .A .K .F)
+
+df_v0_PDQ39
+df_v0_LARS
+df_v0_HAMA   ___ coder les valeurs : Leger absent ...ect 
+df_v0_HAMD
+df_v0_MOCA
+df_v0_UPDRS_IV   _____ coder les valeurs : Leger absent ...ect 
+df_v0_QUIP
+df_v0_ECMP
+df_v0_UPDRS_III
+df_v0_UPDRSIII_TOTAUX 
+
+
+::::::organisation des feuille dans excel  :::: 
+
+
+taches ___________
+V0 changer le nom de la colonne  D_SCREEN par D_VISIT  ---- fait
+LEDD confirmer la colonne score total 
+
+
+____ :: vérifier la cohérence des valeurs .k 
+conso_specifique ::  colonne CAT_TRT_ANTIPARK , DOSE_TOT_JOURN , IF_ et CONCAT_???
+PSYCHOTROPES       
+AUTRE_PARKINSON    
+
+UPDRSIII  :: supprimer la feuille TOTAUX les 7  dernières ligne 
+
+UPDRSIV :: coder les valeurs   ----------- je suis la a continuer 
+
+
+
+    "Normal": 0,
+    "Minime": 1,
+    "Léger": 2,
+    "Modéré": 3,
+    "Sévère": 4
+
+
+crée une colonne score total 
+
+
+PDQ39 :: coder les valeurs 
+
+
+    "Jamais": 0,
+    "Rarement": 1,
+    "Parfois": 2,
+    "Souvent": 3,
+    "Toujours": 4,
+    "Toujours ou ne peut jamais faire": 4,
+    "Oui" : 1,
+    "Non" : 0
+
+
+QUIP :::  à voir pour le score total puis c'est OUI/NON 1/0
+
+MOCA :: score total sur 30 
+complèter le score total
+
+HAMA :: 
+coder les valeurs 
+vérifier la colonne total
+Score total : de 0 à 56
+
+
+  "Absent": 0,
+
+    "Léger": 1,
+    "Anxiété légère": 1,
+
+    "Modéré": 2,
+
+    "Anxiété légère à modérée": 2,
+
+    "Sévère": 3,
+    "Anxiété modérée à grave": 3,
+
+    "Très sévère": 4
+
+
+
+
+HAMD : """ meme chose HAM 
+
+    "Symptomes dépressifs légers": 1,
+    "Symptômes dépressifs légers à modérés": 2,
+    "Symptômes dépressifs modérés à sévères": 3,
+
+
+
+LARS : échelle utilisée pour mesurer l’apathie Score global allant environ de -36 à +36
+confirme le score total 
+
+ECMP : à voir avec ?????
+DIGISMT_TRAILMT_DKEFS ::: à voir quoi faire car plusieurs tests 
+
+
+Liste df_total_______
+df_v0_PDQ39
+df_v0_MOCA
+df_v0_HAMA
+df_v0_HAMD
+df_v0_LARS
+
+df_v0_Total_LEED
+df_v0_Total_PDQ39
+df_v0_Total_HAMA
+df_v0_Total_HAMD
+df_v0_Total_LARS
+
+
+
+
+
+
+
+
+
+
+
+structure finale  fichier Excel : 
+
+info.xlsx   : info statique du patient 
+
+
+V{0,1,3,5}.xlsx : visites   
+
+les feuilles pour chaque  sont : 
+   
+        "V{v}"   :                 
+        "LEDD"                  
+        "CONSO_SPECIFIQUE"        
+        "PSYCHOTROPES"            
+        "AUTRE_PARKINSON"         
+        "UPDRSIII"                
+        "UPDRSIV"                
+        "PDQ39"                   
+        "QUIP"                    
+        "MOCA"                    
+        "HAMA"                    
+        "HAMD"                    
+        "LARS"                    
+        "ECMP"                    
+        "DIGITSMT_TRAILMT_DKEFS"  
+        "Totaux"  
+	"FREQUENCE" (juste pour les V{1,3,5}   
+
+
+
+
+
+            f"V{v}"            
+            "LEDD"             
+            "CONSO_SPECIFIQUE" 
+            "PSYCHOTROPES"     
+            "AUTRE_PARKINSON" 
+                  
+    
+
+
+
+
+
+___________________________________________
+
+Bonsoir !
+
+Comme convenu lors de la réunion, vous trouverez ci-joint un lien de téléchargement vers les fichiers décrivant : i) la BDD telle que nous l'avions formatée pour être analysée dans APASTIM, ii) un exemple de recodage de variables dont les psychotropes
+
+https://filesender.renater.fr/?s=download&token=9deae05d-dff7-4cea-bcc8-c1fd0683f0ac
+
+
+
+L'étape de tri à plat des données, bien que contraignante, reste une étape clef du travail, car il conditionne la validité de l'analyse.
+
+
+
+Le but est maintenant de décrire l'ensemble des variables de la base afin d'identifier les données manquantes et/ou aberrantes.
+
+
+
+Nous refaisons le point ensemble mercredi prochain, le 20 avril à 16h00 au CIC.
+
+
+
+Bon courage et bon travail d'ici là !
+
+Bien cordialement;
+
+Matthieu.
+
+
+
+
+---------------------
+Bonjour !
+
+Pour rebondir sur l'évaluation de la qualité de vie, il existe en réalité 3 façons de calculer un score global :
+
+
+
+1) Le summary index (PDQ-39 SI)
+
+SI=D1+D2+⋯+D88\text{SI}=\frac{D_1+D_2+\cdots+D_8}{8}SI=8D1+D2+⋯+D8
+où chaque domaine DiD_iDi est un score de 0 à 100. Ici, chaque domaine pèse autant, qu’il contienne 10 items (mobilité) ou 3 items (soutien social). 
+
+
+
+2) La somme brute des 39 items
+
+Somme brute=∑j=139itemj\text{Somme brute}=\sum_{j=1}^{39} item_jSomme brute=j=1∑39itemj
+avec un range de 0 à 156 puisque chaque item vaut de 0 à 4. 
+
+
+
+3) La somme brute standardisée sur 0–100
+
+Total standardiseˊ=∑itemj156×100\text{Total standardisé}=\frac{\sum item_j}{156}\times 100Total standardiseˊ=156∑itemj×100
+
+Dans  APASTIM on a utilisé la méthode 2.
+Pour PREDIWEIGHT et APASTIM2, il faut utiliser la méthode 1.
+
+Bonne journée, et suivre !
+Bien cordialement;
+Matthieu.
+
+_____________________________________________
+
+
+
+Bonsoir Quentin et Marie-Blanche,
+
+J'ai oublié de vous poser une question tout à l'heure :
+
+Nous sommes en train de travailler sur la cohorte PREDISTIM sur laquelle nous avons publié notre papier apathie. On s'intéresse maintenant à la prise de poids, et nous avons évidemment comme co-variables (entre autres !), la prise de psychotrope. Nous allons renseigner la prise de Bzd, antidep, anti-psychotiques (cloza et quetia), et thymorégulateurs. Est-ce qu'il y aurait oui ou non intérêt à renseigner les doses de ces traitements selon vous? Dans l'affirmative, existe-t-il des équivalents tels que ceux utilisés pour quantifier les traitements dopaminergiques?
+
+D'avance, merci pour vos retours.
+
+Bonne soirée,
+
+bien amicalement;
+
+Matthieu.
+
+
+
+
+---------------------------
+Bonjour Matthieu,
+
+Encore désolé d’avoir dû quitter la réunion un peu précipitamment.
+
+si je comprends bien, la question est relativement simple, mais la réponse plus complexe (et Marie-Blanche aura sans doute un éclairage complémentaire, notamment sur l’aspect iatrogénie).
+
+Sur le fond, on sait bien en psychiatrie que certains psychotropes, en particulier les antipsychotiques, sont associés à un risque accru de prise de poids et de syndrome métabolique (bien que la plupart soit contre indiqué dans la MP par effet D2). Il existe d’ailleurs plusieurs publications proposant des hiérarchisations de ce risque entre molécules.
+
+En revanche, la relation dose-effet est beaucoup moins claire. Selon les études, on retrouve des profils très variables : parfois une relation plus ou moins linéaire, parfois un effet plateau aux doses élevées, voire des courbes en cloche, ou encore l’absence de corrélation évidente. Autrement dit, la dimension dose-dépendante est difficile à interpréter de façon homogène.
+
+Concernant les équivalences de doses, il existe effectivement des référentiels, mais ils sont surtout conçus pour guider les switches thérapeutiques. Ils reposent davantage sur des doses cibles que sur de véritables équivalences strictes (comme pour la Dopa), les profils pharmacodynamiques étant très différents d’une molécule à l’autre, ce qui impacte justement les effets indésirables, dont la prise de poids.
+
+Pour répondre plus directement à ta question : il me semble pertinent de renseigner les doses dans une optique descriptive, en revanche, leur utilisation dans une analyse statistique globale paraît plus délicate et potentiellement peu robuste, sauf à raisonner de façon très spécifique (par molécule, ou dans des sous-analyses ciblées).
+
+En espérant que cela réponde, au moins en partie, à ta question.
+
+Quelques références mais il y a sans doute mieux à trouver :
+Antipsychotic-Induced Weight Gain: Dose-Response Meta-Analysis of Randomized Controlled Trials. Schizophrenia Bulletin. 2022. Wu H, Siafis S, Hamza T, et al.
+Effects of Long-Term Antipsychotics Treatment on Body Weight: A Population-Based Cohort Study. Journal of Psychopharmacology. 2020. Bazo-Alvarez JC, Morris TP, Carpenter JR, Hayes JF, Petersen I.
+Metabolic Adverse Effects of Off-Label Use of Second-Generation Antipsychotics in the Adult Population: A Systematic Review and Meta-Analysis. Neuropsychopharmacology : Official Publication of the American College of Neuropsychopharmacology. 2022. Stogios N, Smith E, Bowden S, et al.
+Comparative Effects of 11 Antipsychotics on Weight Gain and Metabolic Function in Patients With Acute Schizophrenia: A Dose-Response Meta-Analysis. The Journal of Clinical Psychiatry. 2023. Sabé M, Pallis K, Solmi M, et al.
+Metabolic Side Effects in Persons With Schizophrenia During Mid- To Long-Term Treatment With Antipsychotics: A Network Meta-Analysis of Randomized Controlled Trials. World Psychiatry : Official Journal of the World Psychiatric Association. 2023. Burschinski A, Schneider-Thoma J, Chiocchia V, et al.
+Bien à toi,
+
+
+______________________________________________________
+
+
+
+_ Ajouter UPPS apartire du fichier initiale 
+_Vérefier lorganisation et les calcules et les colonnes 
+
+garder toutes les colonnes : 
+UPDRS IV  , ECMP , QUIP , LARS , UPPS , digitsmt 
+
+garder que les totaux 
+HAMA , HAMD , UPDRS III ,MOCA , PDQ39
+
+changer methode des totaux , 
+PDQ39 :::: 
+UPDRS III pour v0 
+
+____________________
+recalculer PDQ39  : [REF_SITU_FAM] colonne ??? 
+updrs III pour v0 
+____________________
+j'ai ajouter UPPS 
+j'ai ordonner les feuilles 
+j'ai calculer le pdq39 
+reste a calculer updrsIII et completer les taille en utilisant v0 et ou v1  fait 
+pour v5  updrIII colonne visit presente et insert visite 5   fait 
+
+verifier updrIII pour les autres apart le v0 
+
+
+
+
+best on 
+
+combien de pourcentage le score moteur était améliore sous l'effet de la dopamine ? 
+programme a comparer tous les UPDRS totaux 0 off 15 120 minutes 
+un patien qelle est le best on = addition tout les score a 15 30 60 qelles est le score le plus faible 
+ce score le plus faible determine le best on du patien 
+
+garder tous les items du best on 
+faut calculer les score a 15 30 60 90 120 determiner le score le plus bas 
+
+
+salut 
+je veux  me confirmer si jai bien compris aporpos d'updrsIII  de v0 
+c
+
+
+
