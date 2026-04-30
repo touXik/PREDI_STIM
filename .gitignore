@@ -19,7 +19,14 @@ Analyses_statistiques.ipynb
 dict.docx
 # === Tous les notebooks (optionnel, décommente si tu veux tout ignorer) ===
 # *.ipynb
+notes.docx
+Nouveau Document texte.txt
 
+~$dict.docx
+
+01_Structure.ipynb
+03_prétraitement_all.ipynb
+05_Traitement_all.ipynb
 # === Fichiers temporaires ===
 *.tmp
 *.log
