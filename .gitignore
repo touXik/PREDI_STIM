@@ -15,6 +15,12 @@ valeurs_aberrantes.ipynb
 04_Traitement.ipynb
 Analyse.ipynb
 Analyses_statistiques.ipynb
+Traitement_final.ipynb
+Traitement_psychotropes.ipynb
+
+# 01_Structure.ipynb
+# 03_prétraitement_all.ipynb
+# 05_Traitement_all.ipynb
 
 dict.docx
 # === Tous les notebooks (optionnel, décommente si tu veux tout ignorer) ===
@@ -22,11 +28,10 @@ dict.docx
 notes.docx
 Nouveau Document texte.txt
 
-~$dict.docx
+*.docx
 
-01_Structure.ipynb
-03_prétraitement_all.ipynb
-05_Traitement_all.ipynb
+
+
 # === Fichiers temporaires ===
 *.tmp
 *.log
